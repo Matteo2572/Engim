@@ -1,0 +1,82 @@
+let inputarray = [
+{name: 'FD', categoria: 'CAT1'},
+{name: 'DF', categoria: 'CAT2'},
+{name: 'HJ', categoria: 'CAT3'},
+{name: 'KL'},
+{name: 'CV', categoria: 'CAT2'},
+{name: 'KL', categoria: 'CAT1'}
+];
+
+risultato1 = es1(inputarray)
+
+function es1(inputarray){
+    let cont=0
+    for (let index = 0; index < inputarray.length; index++) {
+        if (inputarray[index].categoria=='CAT1') {
+            cont++
+        }
+    }
+    return cont
+}
+
+//////////////////////////////////////////////
+
+var ret
+ret = 1 + 5 //--> Number
+ret = 1 + '5' //--> String
+ret = '1' + 5 //--> String
+
+
+var a = '1' //--> String
+ret = a + 1 //--> String
+ret = 1 + 2 + 3 + '4' //--> String
+ret = '' + 1 //--> String
+
+var b
+ret = b + 1 //--> Number
+
+console.log(typeof(ret))
+
+//////////////////////////////////////////////
+
+let arrayInt=[1,2,3,5,4,9]
+
+risultato3 = es3(arrayInt)
+             
+function es3(arrayInt){
+    let somma=0
+    for (let index = 0; index < arrayInt.length; index++) {
+        somma=somma+arrayInt[index]
+    }
+    return somma
+}
+
+//////////////////////////////////////////////
+
+let arrayDA=[array1=[1,2,3],array2=[1,2],array3=[1,2,3,4,5]]
+
+risultato4 = es4(arrayDA)
+
+function es4(arrayDA){
+    let lunghTot=0
+    for (let index = 0; index < arrayDA.length; index++) {
+        lunghTot=lunghTot+arrayDA[index].length
+    }
+    return lunghTot
+}
+
+//////////////////////////////////////////////
+
+let arrayStud = [{"nome":"Marco","cognome":"Bianchi","presenze":[4,5,7,8]},
+               {"nome":"Alessio","cognome":"Rossi","presenze":[200,186]},
+               {"nome":"Luca","cognome":"Neri","presenze":[9,300,40]}]
+
+risultato5 = es5(arrayStud)
+
+function es5(arrayStud){
+    let presenza=0
+    for (let index = 0; index < arrayStud.length; index++) {
+        presenza = arrayStud[index].presenze.length
+        console.log("La somma delle presenze di "+arrayStud[index].nome+" "+arrayStud[index].cognome+" è "+presenza)
+    }
+}
